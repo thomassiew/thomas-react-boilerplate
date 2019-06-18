@@ -1,17 +1,21 @@
-import React, { Component } from "react";
-import { Route } from "react-router-dom";
-import Noties from "../pages/main/Noties";
-import Kanban from "../pages/main/Kanban";
+import React from "react";
+import { Route, Switch } from "react-router-dom";
 
-class Routing extends Component {
+import RegistrationPage from "../pages/RegistrationPage";
+import HomePage from "../pages/HomePage";
+import ProfilePage from "../pages/ProfilePage";
+import LoginPage from "../pages/LoginPage";
+
+class Routing extends React.Component {
   render() {
     return (
-      <div>
-        <Route exact path="/" component={Noties} />
-        <Route path="/kanban" component={Kanban} />
-      </div>
+      <Switch>
+        <Route exact path="/home" component={HomePage} />
+        <Route exact path="/profile" component={ProfilePage} />
+        <Route exact path="/login" component={LoginPage} />
+        <Route exact path="/signup" component={RegistrationPage} />
+      </Switch>
     );
   }
 }
-
 export default Routing;

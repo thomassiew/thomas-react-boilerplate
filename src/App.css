@@ -2,14 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -30,4 +23,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+/* override bootstrap navbar colors */
+.navbar,
+.navbar-default {
+  background-color: #57c0ed !important; /* override background image gradient w/ flat color */
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.dropdown-menu {
+  right: 0 !important;
+  left: auto !important;
 }
